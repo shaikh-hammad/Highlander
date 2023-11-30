@@ -1,0 +1,31 @@
+﻿<Page
+    x:Class="Highlander.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Highlander"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel Margin="20">
+            <TextBlock Text="Highlander Simulation" Style="{StaticResource HeaderTextBlockStyle}" />
+
+            <TextBlock Text="Grid Size:" />
+            <TextBox x:Name="GridSizeTextBox" PlaceholderText="Enter grid size" />
+
+            <TextBlock Text="Good Highlanders:" />
+            <TextBox x:Name="GoodHighlandersTextBox" PlaceholderText="Enter number of good Highlanders" />
+
+            <TextBlock Text="Bad Highlanders:" />
+            <TextBox x:Name="BadHighlandersTextBox" PlaceholderText="Enter number of bad Highlanders" />
+
+            <CheckBox x:Name="AutoGenerateCheckBox" Content="Auto-generate Highlander numbers" />
+
+            <Button Content="Start Simulation" Click="StartSimulation_Click" />
+            <Button Content="Stop Simulation" Click="StopSimulation_Click" />
+
+            <TextBox x:Name="SimulationResultTextBlock" Height="200px" Margin="0,20,0,0" TextWrapping="Wrap" />
+        </StackPanel>
+    </Grid>
+</Page>
